@@ -20,7 +20,7 @@ int main()
         float resup = sumup(nmax);
         float resdown = sumdown(nmax);
         float diff = std::fabs(1 - resup/resdown);
-        std::println(fout, "{:12} {:15.6e} {:15.6e} {:15.6e}", nmax, resup, resdown, diff);
+        std::println(fout, "{:13} {:15.6e} {:15.6e} {:15.6e}", nmax, resup, resdown, diff);
     }    
 
     fout.close();
