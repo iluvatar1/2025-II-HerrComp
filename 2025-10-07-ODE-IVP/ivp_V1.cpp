@@ -22,7 +22,7 @@ int main(void)
   params["M"] = 1.142187386;
   initial_conditions(S, 0);
 
-  integrate_euler(fderiv, S, 0.0, 10.0, 0.1, params, print);
+  integrate_euler(fderiv, S, 0.0, 30.0, 0.1, params, print);
   
   return 0;
 }
@@ -31,7 +31,7 @@ int main(void)
 void fderiv(const state_t & s, state_t & dsdt, double t, params_t & params)
 {
   dsdt[0] = s[1];
-  dsdt[1] = -params["K"]*s[0]*s[0]*s[0]/params["M"];
+  dsdt[1] = -params["K"]*s[0]/params["M"];
 }
 
 void initial_conditions(state_t & s, double t0)

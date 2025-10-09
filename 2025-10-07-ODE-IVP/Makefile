@@ -1,5 +1,5 @@
 
-all: ivp_V1.x
+all: ivp_V2.x
 
 %.x : %.cpp
 	g++ -std=c++23 $< -o $@
